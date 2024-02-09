@@ -1,0 +1,55 @@
+﻿@model YourNamespace.Models.Reclamo
+
+@{
+    ViewBag.Title = "Nuevo Reclamo";
+}
+
+@using (Html.BeginForm("NuevoReclamo", "Reclamo", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(m => m.Categoria)
+        @Html.TextBoxFor(m => m.Categoria)
+    </div>
+
+    <div>
+            @Html.LabelFor(m => m.Descripcion)
+            @Html.TextBoxFor(m => m.Descripcion)
+    </div>
+
+    <div>
+            @Html.LabelFor(m => m.Fecha)
+            @Html.TextBoxFor(m => m.Fecha)
+    </div>
+
+    <div>
+                @Html.LabelFor(m => m.Estado)
+                @Html.TextBoxFor(m => m.Estado)
+    </div>
+
+    <div>
+                @Html.LabelFor(m => m.Usuario)
+                @Html.TextBoxFor(m => m.Usuario)
+    </div>
+
+    <div>
+                @Html.LabelFor(m => m.Responsable)
+                @Html.TextBoxFor(m => m.Responsable)
+    </div>
+
+    <div>
+                    @Html.LabelFor(m => m.Comentario)
+                    @Html.TextBoxFor(m => m.Comentario)
+    </div>
+
+    <div>
+                    @Html.LabelFor(m => m.FechaCierre)
+                    @Html.TextBoxFor(m => m.FechaCierre)
+    </div>
+
+    // Crear campos de formulario para todos los atributos del modelo...
+
+    <input type="submit" value="Enviar" />
+}
+
