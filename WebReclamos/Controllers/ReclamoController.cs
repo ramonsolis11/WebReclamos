@@ -15,8 +15,11 @@ public class ReclamoController : Controller
         if (ModelState.IsValid)
         {
             // Lógica para enviar los datos a SAP Business One
+            return RedirectToAction("ReclamoEnviado");
+
         }
         return View(model);
     }
+
 }
 
